@@ -15,10 +15,15 @@ function App() {
     { name: 'Emma Gustafsson', email: 'emma@example.com', city: 'Norrköping' },
     { name: 'Peter Björk', email: 'peter@example.com', city: 'Lund' }
   ];
+
+  function handleShowInfo(name: string) {
+    alert(name);
+  }
+
   return (
     <>
       <h1>Phone Book</h1>
-      <UserList users={users}></UserList>
+      <UserList users={users} onShowInfo={handleShowInfo}></UserList>
     </>
   );
 }
